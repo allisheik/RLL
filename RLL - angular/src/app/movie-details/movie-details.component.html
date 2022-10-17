@@ -1,0 +1,18 @@
+<img [src]="card.imageUrl" class=" col-md-3" alt="...">
+<h1>
+{{card.title}}
+</h1>
+<h4>
+    <br>
+    {{card.price}}$
+    <br>
+    
+    <br>
+    {{card.seatscount}} Seats
+</h4>
+
+
+<label>Enter Number Of Tickets : </label>
+<input type="text" [(ngModel)] = "ticketsno">
+<p>Amount to be paid : {{ticketsno * card.price }}</p>
+<button (click)="onSubmit()">Submit</button>
